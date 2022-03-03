@@ -1,0 +1,56 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable no-undef */
+import { jest, describe, expect, test } from '@jest/globals';
+// import GeneratedJson from "../src/services/mocks/data/generated_json.json";
+import { mount, shallowMount, localVue, router } from "@vue/test-utils";
+
+import Scheduler from "../src/components/Scheduler.vue";
+import Multiselect from "vue-multiselect";
+import { DayPilot, DayPilotScheduler } from "daypilot-pro-vue";
+//import { makeServer } from "./server";
+import axios from "axios";
+import appservice from "../src/services/appservice";
+import store from "../src/store/";
+
+
+let myEvents = [];
+let myResources = [];
+let tasks = [];
+let API_KEY;
+const URI_ACTION = "https://0002-zebridge-dev-externe.api.crm-simple.com/interaction/";
+const URI = "https://0002-zebridge-dev-externe.api.crm-simple.com/interactions/";
+const generateToken = () => {
+  return appservice
+    .getToken("admin", "Dw3BwezaQSar")
+    .then((data) => {
+      // console.log("ladata = ", data)
+      return data;
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+};
+function findTaskWithIdAction(listOfTasks, searchIdAction) {
+  //console.log(listOfTasks.length);
+  let task;
+  listOfTasks.forEach(taskSearched => {
+
+    if (taskSearched.idaction === searchIdAction) {
+      task = taskSearched
+      //console.log("TASK SEARCHED IS :", taskSearched);
+      return taskSearched;
+    }
+  });
+  return task;
+}
+
+//const server = makeServer();
+const thegenerateToken = () => {
+  return appservice.getToken("admin", "Dw3BwezaQSar");
+};
+// console.log(generateToken())
+// get token before each test
+beforeEach(() => { });
+// test props
+
+
