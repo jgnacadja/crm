@@ -3,36 +3,36 @@ import Scheduler from "@/components/Scheduler.vue";
 import SchedulerKanban from "@/components/SchedulerKanban.vue";
 import agenda from "@/components/agenda.vue";
 
-const GantSimpleCrm = {
+const Gant = {
     install(Vue) {
-        Vue.component("GantSimpleCrm", Gantt);
+        Vue.component("Gant", Gantt);
     }
 };
 
-const PlannerSimpleCrm = {
+const Planner = {
     install(Vue) {
-        Vue.component("PlannerSimpleCrm", Scheduler);
+        Vue.component("Planner", Scheduler);
     },
 };
 
-const KanbanSimpleCrm = {
+const Kanban = {
     install(Vue) {
-        Vue.component("KanbanSimpleCrm", SchedulerKanban);
+        Vue.component("Kanban", SchedulerKanban);
     },
 };
 
-const CalendarSimpleCrm = {
+const Agenda = {
     install(Vue) {
-        Vue.component("CalendarSimpleCrm", agenda);
+        Vue.component("agenda", agenda);
     },
 };
 
 // Automatic installation if Vue has been added to the global scope.
 if (typeof window !== 'undefined' && window.Vue) {
-    window.Vue.use(GantSimpleCrm);
-    window.Vue.use(PlannerSimpleCrm);
-    window.Vue.use(KanbanSimpleCrm);
-    window.Vue.use(CalendarSimpleCrm);
+    window.Vue.use(Gant);
+    window.Vue.use(Planner);
+    window.Vue.use(Kanban);
+    window.Vue.use(Agenda);
 }
 
-export default GantSimpleCrm;
+export default Agenda;
