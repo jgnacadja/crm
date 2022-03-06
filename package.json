@@ -1,12 +1,29 @@
 {
-    "name": "simple-crm",
+    "name": "vue-simplecrm",
     "version": "0.1.0",
-    "private": true,
+    "private": false,
+    "author": {
+        "name": "jacques GNACADJA",
+        "email": "unis.gnacadja@gmail.com"
+    },
+    "repository": "https://github.com/jgnacadja/crm",
+    "bugs": "https://github.com/jgnacadja/crm/issues",
+    "keywords": [
+        "crm",
+        "calendar",
+        "planning", "Gant", "kanban"
+    ],
+    "license": "MIT",
+    "files": [
+        "dist"
+    ],
+    "main": ".dist/vue-simplecrm-tool.common.js",
     "scripts": {
         "serve": "vue-cli-service serve",
         "build": "vue-cli-service build",
         "lint": "vue-cli-service lint",
         "test:unit": "vue-cli-service test:unit",
+        "build-library": "vue-cli-service build --target lib --name vue-simplecrm-tool ./src/install.js",
         "test": "jest"
     },
     "dependencies": {
