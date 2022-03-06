@@ -1,6 +1,6 @@
 {
     "name": "vue-simplecrm",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "private": false,
     "author": {
         "name": "jacques GNACADJA",
@@ -10,7 +10,7 @@
     "bugs": "https://github.com/jgnacadja/crm/issues",
     "keywords": [
         "crm",
-        "calendar",
+        "agenda",
         "planning", "Gant", "kanban"
     ],
     "license": "MIT",
